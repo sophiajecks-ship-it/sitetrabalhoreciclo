@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReCiclo - Reciclagem com Hora Marcada em Floripa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efeito de "typing" para o subtítulo */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #2dd4bf }
+        }
+        .typing-effect {
+            overflow: hidden;
+            border-right: .15em solid #2dd4bf;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .05em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <a href="#" class="flex items-center space-x-2">
+                <!-- SVG Logo -->
+                <svg class="h-8 w-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.092 1.21-.138 2.43-.138 3.662v.513a1.651 1.651 0 001.651 1.651h1.715a1.651 1.651 0 001.651-1.651v-.513c0-1.232.046-2.453.138-3.662a4.006 4.006 0 013.7-3.7 48.656 48.656 0 017.324 0 4.006 4.006 0 013.7 3.7c.092 1.21.138 2.43.138 3.662v.513a1.651 1.651 0 01-1.651 1.651h-1.715a1.651 1.651 0 01-1.651-1.651v-.513z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 6.75A.75.75 0 0012 6h-.75a.75.75 0 00-.75.75v3.75a.75.75 0 00.75.75h.75a.75.75 0 00.75-.75v-3.75z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75h.008v.008H12v-.008z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 15.75H9v.008h6v-.008z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 18.75H9v.008h6v-.008z" />
+                </svg>
+                <span class="font-bold text-2xl text-green-700">ReCiclo</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#problema" class="text-gray-600 hover:text-green-600 transition">O Problema</a>
+                <a href="#solucao" class="text-gray-600 hover:text-green-600 transition">A Solução</a>
+                <a href="#publico" class="text-gray-600 hover:text-green-600 transition">Para Quem</a>
+            </div>
+            <a href="#download" class="bg-green-600 text-white px-5 py-2 rounded-full font-semibold shadow-md hover:bg-green-700 transition transform hover:scale-105">
+                Baixar o App
+            </a>
+        </nav>
+    </header>
+
+    <!-- Seção Hero -->
+    <main>
+        <section class="relative min-h-[calc(100vh-4rem)] flex items-center bg-white overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-100 to-transparent -z-10"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16">
+                <!-- Coluna de Texto -->
+                <div class="text-center md:text-left">
+                    <span class="text-green-600 font-semibold uppercase tracking-wider">Rota Circular Floripa</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mt-2 mb-4">
+                        A reciclagem saiu do WhatsApp.
+                    </h1>
+                    <div class="flex justify-center md:justify-start">
+                        <h2 class="text-2xl text-gray-700 mb-8 typing-effect">Chegou a coleta com hora marcada.</h2>
+                    </div>
+                    <p class="text-lg text-gray-600 mb-10 max-w-lg mx-auto md:mx-0">
+                        O ReCiclo é o app que conecta condomínios e comércios a cooperativas de reciclagem, transformando o caos da coleta em uma operação eficiente, previsível e lucrativa para todos.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#download" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-green-700 transition transform hover:scale-105">
+                            Quero agendar minha coleta
+                        </a>
+                        <a href="#publico" class="bg-white text-green-600 border border-green-600 px-8 py-3 rounded-lg font-semibold text-lg shadow-md hover:bg-green-50 transition transform hover:scale-105">
+                            Sou uma cooperativa
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna da Imagem/Mockup -->
+                <div class="flex justify-center">
+                    <!-- Mockup do Celular -->
+                    <div class="relative w-72 h-[36rem] bg-gray-900 rounded-[3.5rem] p-4 shadow-2xl border-4 border-gray-800">
+                        <div class="absolute top-6 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-900 rounded-b-lg z-20"></div>
+                        <div class="bg-white w-full h-full rounded-[2.5rem] overflow-hidden">
+                            <!-- Conteúdo do App (Fake) -->
+                            <div class="flex flex-col h-full bg-gray-100">
+                                <div class="bg-white p-4 shadow-sm">
+                                    <h3 class="font-bold text-center text-green-700">ReCiclo</h3>
+                                </div>
+                                <div class="p-4 space-y-4 flex-1">
+                                    <h4 class="font-semibold text-lg">Próximas Coletas</h4>
+                                    <!-- Card de Coleta -->
+                                    <div class="bg-white p-4 rounded-xl shadow">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-semibold">Condomínio Solar</span>
+                                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">Aceito</span>
+                                        </div>
+                                        <p class="text-gray-600 text-sm mt-1">Material: Papelão e Vidro</p>
+                                        <p class="text-gray-800 font-semibold mt-2">Hoje, 14:00 - 15:00</p>
+                                    </div>
+                                    <!-- Card de Coleta -->
+                                    <div class="bg-white p-4 rounded-xl shadow">
+                                        <div class="flex justify-between items-center">
+                                            <span class="font-semibold">Cafeteria da Lagoa</span>
+                                            <span class="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded-full font-medium">Pendente</span>
+                                        </div>
+                                        <p class="text-gray-600 text-sm mt-1">Material: Vidro e Latas</p>
+                                        <p class="text-gray-800 font-semibold mt-2">Amanhã, 09:00 - 10:00</p>
+                                    </div>
+                                </div>
+                                <div class="p-4 border-t bg-white">
+                                    <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold shadow-lg hover:bg-green-700 transition">
+                                        + Agendar Nova Coleta
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção O Problema -->
+        <section id="problema" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-green-600 font-semibold uppercase">A Dor Real de Floripa</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-6">
+                        O WhatsApp virou o gargalo da reciclagem
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-12">
+                        Mensagens perdidas, horários que não batem, lixo contaminado e rotas ineficientes. O sistema atual é baseado na sorte e gera prejuízo para quem gera e para quem coleta.
+                    </p>
+                </div>
+                <!-- Cards do Problema -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: Coordenação -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                        <div class="bg-red-100 text-red-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6 mb-2">Coordenação e Previsibilidade</h3>
+                        <p class="text-gray-600">"A cooperativa não consegue vir no meu horário."<br/>- Dono de Cafeteria</p>
+                        <p class="text-gray-600 mt-2">"Muda o porteiro e embaralha tudo."<br/>- Síndica de Condomínio</p>
+                    </div>
+                    <!-- Card 2: Qualidade -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                        <div class="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6 mb-2">Qualidade do Material</h3>
+                        <p class="text-gray-600">"Quando o material vem sujo, a gente perde dinheiro e acaba recusando."<br/>- Catadora Associada</p>
+                    </div>
+                    <!-- Card 3: Transparência -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                        <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-6 mb-2">Transparência Econômica</h3>
+                        <p class="text-gray-600">"Não tenho volume suficiente para negociar preço. Preços e critérios são só no 'boca a boca'."<br/>- Dono de Cafeteria</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Solução -->
+        <section id="solucao" class="py-16 sm:py-24 bg-green-700 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-green-200 font-semibold uppercase">A Solução ReCiclo</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">
+                        A "cola digital" para a reciclagem
+                    </h2>
+                    <p class="text-lg text-green-100 mb-12">
+                        O ReCiclo funciona como um "iFood" ou "BlaBlaCar" da reciclagem. Conectamos quem gera o resíduo limpo com a cooperativa certa, na hora certa.
+                    </p>
+                </div>
+                <!-- Passos -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-gray-800">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="bg-green-100 text-green-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">1</div>
+                        <h3 class="text-xl font-semibold mt-6 mb-2">Agende e Anexe a Foto</h3>
+                        <p class="text-gray-600">O gerador (síndico ou lojista) agenda a coleta, informa o material e anexa uma foto como "prova de qualidade".</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="bg-green-100 text-green-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">2</div>
+                        <h3 class="text-xl font-semibold mt-6 mb-2">Receba e Otimize a Rota</h3>
+                        <p class="text-gray-600">A cooperativa vê todos os pedidos no mapa, aceita e otimiza sua rota de coleta, economizando tempo e combustível.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="bg-green-100 text-green-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">3</div>
+                        <h3 class="text-xl font-semibold mt-6 mb-2">Coleta Garantida e Feedback</h3>
+                        <p class="text-gray-600">A coleta é feita no horário marcado (SLA). Todos recebem feedback, e o gerador ganha relatórios de impacto (ESG).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Público-Alvo -->
+        <section id="publico" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <span class="text-green-600 font-semibold uppercase">Feito para Todos os Lados</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-12">
+                        O ReCiclo beneficia o ecossistema inteiro
+                    </h2>
+                </div>
+                <!-- Abas/Cards do Público -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Síndicos e Condomínios -->
+                    <div class="flex flex-col bg-gray-50 rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                        <div class="p-8 flex-1">
+                            <div class="bg-blue-100 text-blue-700 w-12 h-12 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold mt-6 mb-3">Para Síndicos e Condomínios</h3>
+                            <p class="text-gray-600 mb-6">Cansado de lixo acumulado e da confusão de horários? Tenha previsibilidade total e engaje seus moradores.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">Agendamento com SLA (hora marcada)</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">Relatórios de impacto (ESG)</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">Feedback sobre a qualidade da separação</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Comércios e Restaurantes -->
+                    <div class="flex flex-col bg-gray-50 rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                        <div class="p-8 flex-1">
+                            <div class="bg-yellow-100 text-yellow-700 w-12 h-12 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h2.64m-13.5 0H9.3m3.375 0h.625m-3.375 0c.621 0 1.125-.504 1.125-1.125V13.5A2.25 2.25 0 0011.25 11.25H10.5a2.25 2.25 0 00-2.25 2.25v6.375c0 .621.504 1.125 1.125 1.125H9.3m3.375 0H12m2.625 0H15m0 0H9.3" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold mt-6 mb-3">Para Comércios e Cafeterias</h3>
+                            <p class="text-gray-600 mb-6">Seu volume é pequeno demais para negociar? Precisa de coletas rápidas em horários específicos? O ReCiclo é para você.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">Coleta sob demanda (On-demand)</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">Transparência nos preços dos materiais</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">Garantia de coleta em janelas curtas</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Cooperativas e Catadores -->
+                    <div class="flex flex-col bg-gray-50 rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                        <div class="p-8 flex-1">
+                            <div class="bg-green-100 text-green-700 w-12 h-12 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 013.375-3.375h9.75a3.375 3.375 0 013.375 3.375V18.75m-17.25 4.5H3.375m17.25 0H18.625M5.25 14.25h13.5m-13.5 0a3.375 3.375 0 01-3.375-3.375V6.375a3.375 3.375 0 013.375-3.375h9.75a3.375 3.375 0 013.375 3.375v4.5a3.375 3.375 0 01-3.375 3.375H5.25z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-semibold mt-6 mb-3">Para Cooperativas e Catadores</h3>
+                            <p class="text-gray-600 mb-6">Perca menos tempo no WhatsApp e mais tempo coletando com eficiência. Receba material de qualidade e aumente sua renda.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">Rotas otimizadas pelo app (menos gasto)</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">"Prova de Qualidade" com foto (menos contaminação)</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                    <span class="text-gray-700">Acesso a novos clientes premium (comércios)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção CTA (Download) -->
+        <section id="download" class="py-16 sm:py-24 bg-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+                    Vamos tirar a reciclagem do caos.
+                </h2>
+                <p class="text-lg text-gray-600 mt-4 mb-10 max-w-2xl mx-auto">
+                    Faça parte da mudança em Florianópolis. Baixe o app e agende sua primeira coleta, ou cadastre sua cooperativa para otimizar suas rotas.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <!-- Botão Google Play -->
+                    <a href="#" class="flex items-center justify-center gap-3 bg-gray-800 text-white px-6 py-4 rounded-lg shadow-lg hover:bg-gray-900 transition transform hover:scale-105">
+                        <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M3 20.575V3.425a1 1 0 011.482-.874l14.12 8.574a1 1 0 010 1.75l-14.12 8.574A1 1 0 013 20.575zM17.804 12L5 4.65v14.7L17.804 12zM5.93 14.25l6-3.15l-6-3.15v6.3zM18.89 11.2L5.93 3.75v16.5l12.96-7.5z"/></svg>
+                        <div>
+                            <p class="text-xs -mb-1">Baixar no</p>
+                            <p class="text-xl font-semibold">Google Play</p>
+                        </div>
+                    </a>
+                    <!-- Botão App Store -->
+                    <a href="#" class="flex items-center justify-center gap-3 bg-gray-800 text-white px-6 py-4 rounded-lg shadow-lg hover:bg-gray-900 transition transform hover:scale-105">
+                        <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M17.433 16.195c-.007.01-1.34 4.38-4.398 4.38c-3.06 0-4.04-1.748-5.32-1.748c-1.28 0-2.583 1.75-4.045 1.75c-1.463 0-2.822-1.23-3.668-3.107c-1.69-3.743-.32-9.17 2.39-12.01c1.332-1.398 2.7-2.222 4.198-2.222c1.498 0 2.89.825 3.79 2.22c.9-1.398 2.3-2.22 3.8-2.22c1.5 0 2.85.82 4.18 2.22c2.72 2.84 4.09 8.27 2.4 12.01c-.84 1.88-2.2 3.11-3.66 3.11c-1.47 0-2.77-1.75-4.05-1.75c-1.28 0-2.25 1.75-5.32 1.75c-1.34 0-2.43-.69-3.23-1.69c-.02.01 3.49 1.6 5.8 1.6c1.19 0 2.65-.62 4.05-1.76zm-3.05-12.98c.67-.84 1.84-1.4 2.85-1.4c.1 0 .22.01.33.02c-1.15.22-2.3.82-3.18 2.02c-.6 1.1-1.12 2.3-1.32 3.5c-.07.3-.12.6-.15.9c.03-.01 1.25-.49 2.4-1.85c.06-.06.1-.1.15-.17c-.01-.01-.01-.02 0 0zm-5.18 1.62c-.9-1.2-2.05-1.8-3.2-2.02c1.15-.4 2.4-.4 3.5.02c.9.3 1.7.9 2.3 1.6c1.15 1.36 1.78 3.15 1.58 4.92c-1.3-1.8-3.1-2.9-5.18-4.52z"/></svg>
+                        <div>
+                            <p class="text-xs -mb-1">Baixar na</p>
+                            <p class="text-xl font-semibold">App Store</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="font-bold text-xl text-white">ReCiclo</span>
+                    <p class="text-sm">Conectando Floripa por um futuro mais limpo.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#solucao" class="text-sm hover:text-white transition">Solução</a>
+                    <a href="#publico" class="text-sm hover:text-white transition">Para Quem</a>
+                    <a href="#" class="text-sm hover:text-white transition">Termos de Uso</a>
+                    <a href="#" class="text-sm hover:text-white transition">Privacidade (LGPD)</a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; 2025 ReCiclo. Baseado no estudo de caso "Rota Circular Floripa".</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
